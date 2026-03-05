@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.androidx.ksp)
+    alias(libs.plugins.hiltandroid)
 }
 
 android {
@@ -49,8 +50,12 @@ dependencies {
 
     //Room with Coroutines
     implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.coroutines)
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.sqlite.bundled)
+
+    //Hilt Implementation
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 
 
     testImplementation(libs.junit)
