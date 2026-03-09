@@ -64,6 +64,11 @@ dependencies {
     //Coil Implementation
     implementation(libs.coil.compose)
 
+    //Retrofit & Gson Implementation
+    implementation(libs.retrofit)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
